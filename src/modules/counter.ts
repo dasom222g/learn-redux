@@ -8,3 +8,5 @@ const INCREASE_BY = 'counter/INCREASE_BY' as const
 export const increase = () => ({ type: INCREASE })
 export const decrease = () => ({ type: DECREASE })
 export const increase_by = (step: number) => ({ type: INCREASE_BY, payload: step })
+
+// reducer
