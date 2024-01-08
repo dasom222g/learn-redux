@@ -10,3 +10,4 @@ export const decrease = () => ({ type: DECREASE })
 export const increase_by = (step: number) => ({ type: INCREASE_BY, payload: step })
 
 // reducer
+export const increaseTest = () => { }
