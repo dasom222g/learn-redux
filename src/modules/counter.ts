@@ -1,13 +1,23 @@
 // action type 정의
-const INCREASE = 'counter/INCREASE' as const
-const DECREASE = 'counter/DECREASE' as const
-const INCREASE_BY = 'counter/INCREASE_BY' as const
+const INCREASE = "counter/INCREASE" as const;
+const DECREASE = "counter/DECREASE" as const;
+const INCREASESTEP = "counter/INCREASESTEP" as const;
 
 // action 생성자 함수
 // string타입이 아닌 실제 값을 타입으로 지정해서 타입 범위 좁힘`
-export const increase = () => ({ type: INCREASE })
-export const decrease = () => ({ type: DECREASE })
-export const increase_by = (step: number) => ({ type: INCREASE_BY, payload: step })
+export const increaseAction = () => ({ type: INCREASE });
+export const decreaseAction = () => ({ type: DECREASE });
+export const increaseStepAction = (step: number) => ({
+  type: INCREASESTEP,
+  payload: step,
+});
 
 // reducer
-export const increaseTest = () => { }
+
+export const increase = (
+  state: number,
+  action: typeof INCREASE | typeof DECREASE | typeof INCREASESTEP
+) => {
+  switch (action) {
+  }
+};
